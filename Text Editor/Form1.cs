@@ -248,6 +248,7 @@ namespace Text_Editor
             }
         }
 
+        string savefile2 = "";
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog savefile = new SaveFileDialog();
@@ -257,6 +258,7 @@ namespace Text_Editor
                 StreamWriter txtoutput = new StreamWriter(savefile.FileName);
                 txtoutput.Write(CodeEditor.Text);
                 txtoutput.Close();
+                savefile2 = savefile.FileName;
             }
         }
 
@@ -277,7 +279,16 @@ namespace Text_Editor
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            saveAsToolStripMenuItem.PerformClick();
+            if (savefile2 != "")
+            {
+                StreamWriter txtoutput = new StreamWriter(savefile2);
+                txtoutput.Write(CodeEditor.Text);
+                txtoutput.Close();
+            }
+            else
+            {
+                saveAsToolStripMenuItem.PerformClick();
+            }
         }
 
         private void hideToolStripMenuItem_Click(object sender, EventArgs e)
@@ -296,6 +307,32 @@ namespace Text_Editor
             e.ChangedRange.ClearFoldingMarkers();
             e.ChangedRange.SetFoldingMarkers("{", "}");
             e.ChangedRange.SetFoldingMarkers(@"#region\b", @"#endregion\b");
+        }
+
+        private void sQLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CodeEditor.Language = FastColoredTextBoxNS.Language.SQL;
+            label1.Text = "Using SQL";
+        }
+
+        private void xMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CodeEditor.Language = FastColoredTextBoxNS.Language.XML;
+            label1.Text = "Using XML";
+        }
+
+        private void saveToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (savefile2 != "")
+            {
+                StreamWriter txtoutput = new StreamWriter(savefile2);
+                txtoutput.Write(CodeEditor.Text);
+                txtoutput.Close();
+            }
+            else
+            {
+                saveAsToolStripMenuItem.PerformClick();
+            }
         }
     }
 }

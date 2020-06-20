@@ -44,6 +44,9 @@
             this.javaScriptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pHPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sQLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customLanguageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -51,8 +54,8 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.CodeEditor)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -112,7 +115,8 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveToolStripMenuItem,
-            this.saveAsToolStripMenuItem});
+            this.saveAsToolStripMenuItem,
+            this.saveToolStripMenuItem1});
             this.fileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -156,7 +160,10 @@
             this.lUAToolStripMenuItem,
             this.javaScriptToolStripMenuItem,
             this.pHPToolStripMenuItem,
-            this.vBToolStripMenuItem});
+            this.vBToolStripMenuItem,
+            this.sQLToolStripMenuItem,
+            this.xMLToolStripMenuItem,
+            this.customLanguageToolStripMenuItem});
             this.languagesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.languagesToolStripMenuItem.Name = "languagesToolStripMenuItem";
             this.languagesToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
@@ -167,7 +174,7 @@
             this.cToolStripMenuItem.Name = "cToolStripMenuItem";
             this.cToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.C)));
-            this.cToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.cToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.cToolStripMenuItem.Text = "C#";
             this.cToolStripMenuItem.Click += new System.EventHandler(this.cToolStripMenuItem_Click);
             // 
@@ -177,7 +184,7 @@
             this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
             this.hTMLToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.H)));
-            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.hTMLToolStripMenuItem.Text = "HTML";
             this.hTMLToolStripMenuItem.Click += new System.EventHandler(this.hTMLToolStripMenuItem_Click);
             // 
@@ -186,7 +193,7 @@
             this.lUAToolStripMenuItem.Name = "lUAToolStripMenuItem";
             this.lUAToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.L)));
-            this.lUAToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.lUAToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.lUAToolStripMenuItem.Text = "LUA";
             this.lUAToolStripMenuItem.Click += new System.EventHandler(this.lUAToolStripMenuItem_Click);
             // 
@@ -195,7 +202,7 @@
             this.javaScriptToolStripMenuItem.Name = "javaScriptToolStripMenuItem";
             this.javaScriptToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.J)));
-            this.javaScriptToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.javaScriptToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.javaScriptToolStripMenuItem.Text = "JavaScript";
             this.javaScriptToolStripMenuItem.Click += new System.EventHandler(this.javaScriptToolStripMenuItem_Click);
             // 
@@ -204,7 +211,7 @@
             this.pHPToolStripMenuItem.Name = "pHPToolStripMenuItem";
             this.pHPToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.P)));
-            this.pHPToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.pHPToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.pHPToolStripMenuItem.Text = "PHP";
             this.pHPToolStripMenuItem.Click += new System.EventHandler(this.pHPToolStripMenuItem_Click);
             // 
@@ -213,9 +220,35 @@
             this.vBToolStripMenuItem.Name = "vBToolStripMenuItem";
             this.vBToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.V)));
-            this.vBToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.vBToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.vBToolStripMenuItem.Text = "VB";
             this.vBToolStripMenuItem.Click += new System.EventHandler(this.vBToolStripMenuItem_Click);
+            // 
+            // sQLToolStripMenuItem
+            // 
+            this.sQLToolStripMenuItem.Name = "sQLToolStripMenuItem";
+            this.sQLToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.sQLToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.sQLToolStripMenuItem.Text = "SQL";
+            this.sQLToolStripMenuItem.Click += new System.EventHandler(this.sQLToolStripMenuItem_Click);
+            // 
+            // xMLToolStripMenuItem
+            // 
+            this.xMLToolStripMenuItem.Name = "xMLToolStripMenuItem";
+            this.xMLToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.X)));
+            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.xMLToolStripMenuItem.Text = "XML";
+            this.xMLToolStripMenuItem.Click += new System.EventHandler(this.xMLToolStripMenuItem_Click);
+            // 
+            // customLanguageToolStripMenuItem
+            // 
+            this.customLanguageToolStripMenuItem.Name = "customLanguageToolStripMenuItem";
+            this.customLanguageToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.L)));
+            this.customLanguageToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.customLanguageToolStripMenuItem.Text = "Custom Language";
             // 
             // label1
             // 
@@ -300,6 +333,13 @@
             this.imageList1.Images.SetKeyName(1, "app_16x16.png");
             this.imageList1.Images.SetKeyName(2, "1302166543_virtualbox.png");
             // 
+            // saveToolStripMenuItem1
+            // 
+            this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
+            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem1.Text = "Save";
+            this.saveToolStripMenuItem1.Click += new System.EventHandler(this.saveToolStripMenuItem1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,7 +351,7 @@
             this.Controls.Add(this.CodeEditor);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Text | Code Editor ";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CodeEditor)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -343,11 +383,14 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hideToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripMenuItem sQLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xMLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem customLanguageToolStripMenuItem;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem1;
     }
 }
 
