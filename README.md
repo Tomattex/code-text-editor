@@ -6,4 +6,4 @@ This is a text/code editor made on C# which uses Fast Colored TextBox DLL, and, 
 * [Visual Studio 2019][visualstudio]
 
 [visualstudio]: https://visualstudio.microsoft.com/vs/
-[netframeowkr]: https://dotnet.microsoft.com/download/dotnet-framework/net45
+[netframewokr]: https://dotnet.microsoft.com/download/dotnet-framework/net45
