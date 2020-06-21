@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using FastColoredTextBoxNS;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace Text_Editor
 {
@@ -333,6 +334,17 @@ namespace Text_Editor
             {
                 saveAsToolStripMenuItem.PerformClick();
             }
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            saveToolStripMenuItem.PerformClick();
+        }
+
+        private void compileTheCodeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
         }
     }
 }
